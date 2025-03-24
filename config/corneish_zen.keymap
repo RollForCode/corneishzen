@@ -16,6 +16,18 @@
 };
 
 / {
+    macros {
+        mac_scrn_clpbd: mac_scrn_clpbd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LSHFT &kp LCTRL &kp LGUI &kp G>
+                ;
+        };
+    };
+};
+
+/ {
   behaviors {
     dt_mo_bt_layer: tap_dance {
         compatible = "zmk,behavior-tap-dance";
@@ -43,30 +55,30 @@
     lower_layer {
       label = "NUMBER";
       bindings = <
-        &kp TAB    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5  &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-        &trans     &trans &trans &trans &trans &trans  &kp UP &trans &trans &kp COLON &kp HASH &trans
-        &kp RSHFT  &trans &trans &trans &trans &trans  &kp LEFT &kp DOWN &kp RIGHT &kp DOT &kp FSLH &kp HASH
-                      &kp LGUI &trans &kp SPACE &kp RET &trans &kp RALT
+        &kp TAB    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
+        &trans     &trans &trans &trans &trans &mac_scrn_clpbd  &kp UP &trans &trans &kp COLON &kp HASH &trans
+        &kp RSHFT  &trans &trans &trans &trans &trans           &kp LEFT &kp DOWN &kp RIGHT &kp DOT &kp FSLH &kp HASH
+                            &kp LGUI &trans &kp SPACE           &kp RET &trans &kp RALT
       >;
     };
 
     raise_layer {
       label = "SYMBOL";
       bindings = <
-        &kp TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+        &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
         &kp LCTRL &kp MINUS &kp UNDER &kp PLUS &kp EQUAL &kp PLUS &kp LBRC &kp RBRC &kp LBKT &kp RBKT &kp COLON &kp AT
-        &kp LSHFT &kp BSLH &kp PIPE &kp GRAVE &kp TILDE &kp PLUS &kp EQUAL &kp LT &kp GT &kp QMARK &kp UNDER &trans
-                      &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+        &kp LSHFT &kp BSLH &kp PIPE &kp GRAVE &kp TILDE &kp PLUS  &kp EQUAL &kp LT &kp GT &kp QMARK &kp UNDER &trans
+                      &kp LGUI &trans   &kp SPACE                 &kp RET   &trans    &kp RALT
       >;
     };
 
     bt_layer {
       label = "BLUETOOTH";
       bindings = <
-        &trans   &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-        &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans
-        &trans   &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                    &trans &trans &trans &trans &trans &trans
+        &trans   &trans &trans &trans &trans &trans                                   &trans &trans &trans &trans &trans &trans
+        &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
+        &trans   &trans &trans &trans &trans &trans                                   &trans &trans &trans &trans &trans &trans
+                    &trans &trans &trans                                              &trans &trans &trans
       >;
     };
   };
