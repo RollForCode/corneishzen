@@ -14,13 +14,6 @@
 };
 
 / {
-    macros {
-        mac_scrn_clpbd: mac_scrn_clpbd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LSHFT &kp LCTRL &kp LGUI &kp N4>;
-        };
-    };
 };
 
 / {
@@ -49,10 +42,10 @@
         lower_layer {
             label = "NUMBER";
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5             &kp N6    &kp N7    &kp N8     &kp N9   &kp N0     &kp BSPC
-&trans     &trans  &trans  &trans    &trans  &mac_scrn_clpbd    &trans    &kp UP    &trans     &trans   &kp COLON  &kp NON_US_HASH
-&kp RSHFT  &trans  &trans  &trans    &trans  &trans             &kp LEFT  &kp DOWN  &kp RIGHT  &kp DOT  &kp FSLH   &kp ESCAPE
-                           &kp LGUI  &trans  &kp SPACE          &kp RET   &trans    &kp RALT
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                &kp N6    &kp N7    &kp N8     &kp N9   &kp N0     &kp BSPC
+&trans     &trans  &trans  &trans    &trans  &kp LG(LC(LS(N4)))    &trans    &kp UP    &trans     &trans   &kp COLON  &kp NON_US_HASH
+&kp RSHFT  &trans  &trans  &trans    &trans  &trans                &kp LEFT  &kp DOWN  &kp RIGHT  &kp DOT  &kp FSLH   &kp ESCAPE
+                           &kp LGUI  &trans  &kp SPACE             &kp RET   &trans    &kp RALT
             >;
         };
 
