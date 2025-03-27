@@ -52,10 +52,10 @@
         raise_layer {
             label = "SYMBOL";
             bindings = <
-&kp LG(LC(Q))  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-&kp LCTRL      &kp MINUS  &kp UNDER  &kp PLUS   &kp EQUAL  &kp LG(PLUS)     &kp LBRC   &kp RBRC  &kp LBKT         &kp RBKT  &kp COLON  &kp AT
-&kp LSHFT      &kp BSLH   &kp PIPE   &kp GRAVE  &kp TILDE  &kp LG(MINUS)    &trans     &trans    &kp LT           &kp GT    &kp QMARK  &trans
-                                     &kp LGUI   &trans     &kp SPACE        &kp RET    &trans    &kp RALT
+&kp LG(LC(Q))  &kp EXCL              &kp AT     &kp HASH       &kp DLLR   &kp PRCNT        &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+&kp LCTRL      &kp MINUS             &kp UNDER  &kp PLUS       &kp EQUAL  &kp LG(PLUS)     &kp LBRC   &kp RBRC  &kp LBKT         &kp RBKT  &kp COLON  &kp AT
+&kp LSHFT      &kp NON_US_BACKSLASH  &kp PIPE   &kp LA(TILDE)  &kp TILDE  &kp LG(MINUS)    &trans     &trans    &kp LT           &kp GT    &kp QMARK  &trans
+                                                &kp LGUI       &trans     &kp SPACE        &kp RET    &trans    &kp RALT
             >;
         };
 
